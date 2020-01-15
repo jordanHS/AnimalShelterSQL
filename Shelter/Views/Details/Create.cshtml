@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Shelter.Models.Details
+
+<h4>Add new animnal details</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description)
+    @Html.LabelFor(model => model.Gender)
+    @Html.TextBoxFor(model => model.Gender)
+    @Html.LabelFor(model => model.AdmittanceDate)
+    @Html.TextBoxFor(model => model.AdmittanceDate)
+    @Html.LabelFor(model => model.Breed)
+    @Html.TextBpxFor(model => model.Breed)
+    <input type="submit" value="Add new details" />
+}
+<p>@Html.ActionLink("Show all items", "Index")</p>

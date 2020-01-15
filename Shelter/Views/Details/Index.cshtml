@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Shelter.Models;
+
+<h1>Details</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No items have been added yet!</h3>
+} 
+<ul>
+@foreach (Details details in Model)
+{
+  <li>@Html.ActionLink($"{details.Name}", "Name", new { id = details.DetailsId })</li>
+  <li>@Html.ActionLink($"{details.Description}", "Description", new { id = details.DetailsId })</li>
+  <li>@Html.ActionLink($"{details.Gender}", "Gender", new { id = details.DetailsId })</li>
+  <li>@Html.ActionLink($"{details.AdmittanceDate}", "Admittance Date", new { id = details.DetailsId })</li>
+  <li>@Html.ActionLink($"{details.Breed}", "Breed", new { id = details.DetailsId })</li>
+}
+</ul>
